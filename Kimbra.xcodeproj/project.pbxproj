@@ -1,0 +1,432 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */; };
+		5E9AC32D1AFAAB04003E85BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC32C1AFAAB04003E85BD /* ViewController.swift */; };
+		5E9AC3301AFAAB05003E85BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC32E1AFAAB05003E85BD /* Main.storyboard */; };
+		5E9AC3321AFAAB05003E85BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3311AFAAB05003E85BD /* Images.xcassets */; };
+		5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */; };
+		5E9AC3411AFAAB05003E85BD /* KimbraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */; };
+		5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5E9AC33B1AFAAB05003E85BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E9AC31D1AFAAB04003E85BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5E9AC3241AFAAB04003E85BD;
+			remoteInfo = Kimbra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5E9AC3251AFAAB04003E85BD /* Kimbra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kimbra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9AC3291AFAAB04003E85BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E9AC32C1AFAAB04003E85BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E9AC32F1AFAAB05003E85BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E9AC3311AFAAB05003E85BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5E9AC3341AFAAB05003E85BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5E9AC33A1AFAAB05003E85BD /* KimbraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimbraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E9AC33F1AFAAB05003E85BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimbraTests.swift; sourceTree = "<group>"; };
+		5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E9AC3221AFAAB04003E85BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9AC3371AFAAB05003E85BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E9AC31C1AFAAB04003E85BD = {
+			isa = PBXGroup;
+			children = (
+				5E9AC3271AFAAB04003E85BD /* Kimbra */,
+				5E9AC33D1AFAAB05003E85BD /* KimbraTests */,
+				5E9AC3261AFAAB04003E85BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E9AC3261AFAAB04003E85BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E9AC3251AFAAB04003E85BD /* Kimbra.app */,
+				5E9AC33A1AFAAB05003E85BD /* KimbraTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E9AC3271AFAAB04003E85BD /* Kimbra */ = {
+			isa = PBXGroup;
+			children = (
+				5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */,
+				5E9AC32C1AFAAB04003E85BD /* ViewController.swift */,
+				5E9AC32E1AFAAB05003E85BD /* Main.storyboard */,
+				5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */,
+				5E9AC3311AFAAB05003E85BD /* Images.xcassets */,
+				5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */,
+				5E9AC3281AFAAB04003E85BD /* Supporting Files */,
+			);
+			path = Kimbra;
+			sourceTree = "<group>";
+		};
+		5E9AC3281AFAAB04003E85BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E9AC3291AFAAB04003E85BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E9AC33D1AFAAB05003E85BD /* KimbraTests */ = {
+			isa = PBXGroup;
+			children = (
+				5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */,
+				5E9AC33E1AFAAB05003E85BD /* Supporting Files */,
+			);
+			path = KimbraTests;
+			sourceTree = "<group>";
+		};
+		5E9AC33E1AFAAB05003E85BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5E9AC33F1AFAAB05003E85BD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E9AC3241AFAAB04003E85BD /* Kimbra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E9AC3441AFAAB05003E85BD /* Build configuration list for PBXNativeTarget "Kimbra" */;
+			buildPhases = (
+				5E9AC3211AFAAB04003E85BD /* Sources */,
+				5E9AC3221AFAAB04003E85BD /* Frameworks */,
+				5E9AC3231AFAAB04003E85BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kimbra;
+			productName = Kimbra;
+			productReference = 5E9AC3251AFAAB04003E85BD /* Kimbra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5E9AC3391AFAAB05003E85BD /* KimbraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E9AC3471AFAAB05003E85BD /* Build configuration list for PBXNativeTarget "KimbraTests" */;
+			buildPhases = (
+				5E9AC3361AFAAB05003E85BD /* Sources */,
+				5E9AC3371AFAAB05003E85BD /* Frameworks */,
+				5E9AC3381AFAAB05003E85BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5E9AC33C1AFAAB05003E85BD /* PBXTargetDependency */,
+			);
+			name = KimbraTests;
+			productName = KimbraTests;
+			productReference = 5E9AC33A1AFAAB05003E85BD /* KimbraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E9AC31D1AFAAB04003E85BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Arthur Bello";
+				TargetAttributes = {
+					5E9AC3241AFAAB04003E85BD = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					5E9AC3391AFAAB05003E85BD = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 5E9AC3241AFAAB04003E85BD;
+					};
+				};
+			};
+			buildConfigurationList = 5E9AC3201AFAAB04003E85BD /* Build configuration list for PBXProject "Kimbra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E9AC31C1AFAAB04003E85BD;
+			productRefGroup = 5E9AC3261AFAAB04003E85BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E9AC3241AFAAB04003E85BD /* Kimbra */,
+				5E9AC3391AFAAB05003E85BD /* KimbraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E9AC3231AFAAB04003E85BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9AC3301AFAAB05003E85BD /* Main.storyboard in Resources */,
+				5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */,
+				5E9AC3321AFAAB05003E85BD /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9AC3381AFAAB05003E85BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E9AC3211AFAAB04003E85BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9AC32D1AFAAB04003E85BD /* ViewController.swift in Sources */,
+				5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */,
+				5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5E9AC3361AFAAB05003E85BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E9AC3411AFAAB05003E85BD /* KimbraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5E9AC33C1AFAAB05003E85BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5E9AC3241AFAAB04003E85BD /* Kimbra */;
+			targetProxy = 5E9AC33B1AFAAB05003E85BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5E9AC32E1AFAAB05003E85BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E9AC32F1AFAAB05003E85BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E9AC3341AFAAB05003E85BD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5E9AC3421AFAAB05003E85BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E9AC3431AFAAB05003E85BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E9AC3451AFAAB05003E85BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kimbra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5E9AC3461AFAAB05003E85BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Kimbra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5E9AC3481AFAAB05003E85BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KimbraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kimbra.app/Kimbra";
+			};
+			name = Debug;
+		};
+		5E9AC3491AFAAB05003E85BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KimbraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kimbra.app/Kimbra";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E9AC3201AFAAB04003E85BD /* Build configuration list for PBXProject "Kimbra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E9AC3421AFAAB05003E85BD /* Debug */,
+				5E9AC3431AFAAB05003E85BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E9AC3441AFAAB05003E85BD /* Build configuration list for PBXNativeTarget "Kimbra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E9AC3451AFAAB05003E85BD /* Debug */,
+				5E9AC3461AFAAB05003E85BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E9AC3471AFAAB05003E85BD /* Build configuration list for PBXNativeTarget "KimbraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E9AC3481AFAAB05003E85BD /* Debug */,
+				5E9AC3491AFAAB05003E85BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5E9AC31D1AFAAB04003E85BD /* Project object */;
+}
