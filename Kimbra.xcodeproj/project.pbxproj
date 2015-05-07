@@ -13,6 +13,7 @@
 		5E9AC3321AFAAB05003E85BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3311AFAAB05003E85BD /* Images.xcassets */; };
 		5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */; };
 		5E9AC3411AFAAB05003E85BD /* KimbraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */; };
+		5EC1DC1E1AFB713B0025E02B /* ViewControllers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1DC1D1AFB713B0025E02B /* ViewControllers2.swift */; };
 		5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		5E9AC33A1AFAAB05003E85BD /* KimbraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimbraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9AC33F1AFAAB05003E85BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimbraTests.swift; sourceTree = "<group>"; };
+		5EC1DC1D1AFB713B0025E02B /* ViewControllers2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllers2.swift; sourceTree = "<group>"; };
 		5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 			children = (
 				5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */,
 				5E9AC32C1AFAAB04003E85BD /* ViewController.swift */,
+				5EC1DC1D1AFB713B0025E02B /* ViewControllers2.swift */,
 				5E9AC32E1AFAAB05003E85BD /* Main.storyboard */,
 				5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */,
 				5E9AC3311AFAAB05003E85BD /* Images.xcassets */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EC1DC1E1AFB713B0025E02B /* ViewControllers2.swift in Sources */,
 				5E9AC32D1AFAAB04003E85BD /* ViewController.swift in Sources */,
 				5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */,
 				5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */,
