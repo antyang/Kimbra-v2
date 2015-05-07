@@ -8,57 +8,42 @@
         <scene sceneID="nZc-gA-7nu">
             <objects>
                 <tableViewController id="G4c-GS-P58" customClass="ViewControllers2" customModule="Kimbra" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="3" sectionHeaderHeight="22" sectionFooterHeight="22" id="Utb-Tx-A2N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="9as-MS-0ay">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="Imz-q2-8gt">
-                            <rect key="frame" x="0.0" y="8" width="600" height="44"/>
+                        <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xcM-eF-H86">
+                            <rect key="frame" x="0.0" y="64" width="414" height="599"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Copyright" id="GMn-Na-9WD">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="done" id="R5A-Dx-JLk">
-                                        <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="gxh-Ub-L92"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
-                        <sections>
-                            <tableViewSection id="8Co-p0-GKd">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="3" id="AlE-W1-xsO">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AlE-W1-xsO" id="1X0-uq-dE8">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="3" id="ZUV-Xc-qlB">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZUV-Xc-qlB" id="F5j-87-e19">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="3" id="svy-6s-aTb">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="svy-6s-aTb" id="9wM-H3-emS">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <mutableString key="text">Copyright © 2010 by Arthur Bello
+
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, write to the publisher, addressed “Attention: Permissions Coordinator,” at the address below.
+
+Imaginary Press
+1233 Pennsylvania Avenue
+San Francisco, CA 94909
+www.imaginarypress.com
+
+Ordering Information:
+Quantity sales. Special discounts are available on quantity purchases by corporations, associations, and others. For details, contact the publisher at the address above.
+Orders by U.S. trade bookstores and wholesalers. Please contact Big Distribution: Tel: (800) 800-8000; Fax: (800) 800-8001 or visit www.bigbooks.com.
+
+Printed in the United States of America</mutableString>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <connections>
+                            <outlet property="dataSource" destination="G4c-GS-P58" id="VMU-TL-lbY"/>
+                            <outlet property="delegate" destination="G4c-GS-P58" id="Gdg-Kx-tsv"/>
+                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="q17-fI-2Dh"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
-                    <connections>
-                        <outlet property="table_content" destination="Utb-Tx-A2N" id="yNY-be-48T"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XT9-Ri-p3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46" y="-317"/>
+            <point key="canvasLocation" x="44" y="-106"/>
         </scene>
         <!--Table-->
         <scene sceneID="Nof-Hv-YnH">
@@ -69,14 +54,14 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hi9-mt-5sq"/>
+                        <segue destination="ksC-lu-HXa" kind="relationship" relationship="rootViewController" id="hi9-mt-5sq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iie-S4-r6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-665" y="-311"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kimbra" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,12 +70,16 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjf-I5-M4a">
-                                <rect key="frame" x="157" y="42" width="286" height="67"/>
+                                <rect key="frame" x="64" y="558" width="286" height="67"/>
                                 <color key="backgroundColor" red="0.71752683080808088" green="0.072527214598732015" blue="0.11408697523115244" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="HHh-IV-7gY"/>
+                                    <constraint firstAttribute="width" constant="286" id="dSf-aC-PjP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -100,9 +89,31 @@
                                     <action selector="pusher:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FAM-fc-SLB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26i-LX-CyM">
+                                <rect key="frame" x="173" y="633" width="68" height="30"/>
+                                <state key="normal" title="Copyright">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="G4c-GS-P58" kind="show" id="K56-XQ-Q35"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3a-F7-7Rb">
+                                <rect key="frame" x="153" y="506" width="109" height="30"/>
+                                <state key="normal" title="Sound Samples">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7aX-qI-iLC" kind="show" id="PJn-Tw-b9b"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3v-F1-5H3">
-                                <rect key="frame" x="157" y="42" width="286" height="66"/>
+                                <rect key="frame" x="64" y="558" width="286" height="67"/>
                                 <color key="backgroundColor" red="0.0" green="0.33050263162895643" blue="0.69270833333333326" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="061-Gy-cfH"/>
+                                    <constraint firstAttribute="height" constant="67" id="txc-wq-BKG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <state key="normal" title="Record">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -112,29 +123,24 @@
                                     <action selector="record:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jES-Lv-iFM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26i-LX-CyM">
-                                <rect key="frame" x="266" y="555" width="68" height="30"/>
-                                <state key="normal" title="Copyright">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="G4c-GS-P58" kind="popoverPresentation" popoverAnchorView="26i-LX-CyM" id="oKF-fT-Rtu">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="z3v-F1-5H3" secondAttribute="centerX" id="7kt-cy-Qet"/>
-                            <constraint firstAttribute="centerX" secondItem="26i-LX-CyM" secondAttribute="centerX" id="8nv-TJ-uXC"/>
-                            <constraint firstItem="z3v-F1-5H3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IUH-WD-arc"/>
-                            <constraint firstItem="26i-LX-CyM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="535" id="Lh2-b7-8MA"/>
-                            <constraint firstItem="Kjf-I5-M4a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="htd-31-UiQ"/>
-                            <constraint firstAttribute="centerX" secondItem="Kjf-I5-M4a" secondAttribute="centerX" id="pii-RL-fAC"/>
+                            <constraint firstAttribute="centerX" secondItem="26i-LX-CyM" secondAttribute="centerX" id="71j-8g-5fn"/>
+                            <constraint firstItem="z3v-F1-5H3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="494" id="9i6-hT-Ee1"/>
+                            <constraint firstAttribute="centerX" secondItem="Kjf-I5-M4a" secondAttribute="centerX" id="IJ0-TZ-Io3"/>
+                            <constraint firstItem="Kjf-I5-M4a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="494" id="Qjo-bv-6fs"/>
+                            <constraint firstAttribute="centerX" secondItem="P3a-F7-7Rb" secondAttribute="centerX" id="RQy-yQ-pd5"/>
+                            <constraint firstAttribute="centerX" secondItem="z3v-F1-5H3" secondAttribute="centerX" id="YMC-V0-YTR"/>
+                            <constraint firstItem="P3a-F7-7Rb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="442" id="cf5-Qs-BzE"/>
+                            <constraint firstItem="26i-LX-CyM" firstAttribute="top" secondItem="z3v-F1-5H3" secondAttribute="bottom" constant="8" id="hKJ-9j-3qQ"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lXd-gH-g2C"/>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="hu1-zh-Q59"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="record_button" destination="z3v-F1-5H3" id="IqJ-wK-xgW"/>
                         <outlet property="stop" destination="Kjf-I5-M4a" id="b0W-6w-oBN"/>
@@ -142,10 +148,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="343"/>
+            <point key="canvasLocation" x="82" y="519"/>
+        </scene>
+        <!--Samples-->
+        <scene sceneID="GK8-rM-mEw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuL-1f-Fos" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController title="Samples" id="7aX-qI-iLC" customClass="ViewController3" customModule="Kimbra" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qoY-Ln-717">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="7aX-qI-iLC" id="KbR-xu-OoA"/>
+                            <outlet property="delegate" destination="7aX-qI-iLC" id="KI4-LY-tzE"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="716" y="-128"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="GMg-Ub-zzS">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ksC-lu-HXa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="K2Z-C5-4fF"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HIb-F9-4Km">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oke-hO-9Bu"/>
+                        <segue destination="G4c-GS-P58" kind="show" id="NX7-hC-PZd"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jFj-nb-He6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-730" y="519"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gxh-Ub-L92"/>
+        <segue reference="K56-XQ-Q35"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -163,7 +163,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         dunamicButton.layer.borderColor = UIColor.whiteColor().CGColor
         dunamicButton.layer.cornerRadius = 10.0
         println(dunamicButton.tag)
-        dunamicButton.frame = CGRectMake(index, CGFloat(row*110), 100, 100)
+        dunamicButton.frame = CGRectMake(index, CGFloat(row*130), 100, 100)
         dunamicButton.addTarget(self, action: "playAudio:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(dunamicButton)
         if column % 3 == 0 {
