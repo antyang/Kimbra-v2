@@ -107,6 +107,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
+      customArchiveName = "Kimbra"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
