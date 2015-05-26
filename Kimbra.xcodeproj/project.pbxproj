@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */; };
-		5E9AC32D1AFAAB04003E85BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC32C1AFAAB04003E85BD /* ViewController.swift */; };
-		5E9AC3301AFAAB05003E85BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC32E1AFAAB05003E85BD /* Main.storyboard */; };
 		5E9AC3321AFAAB05003E85BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3311AFAAB05003E85BD /* Images.xcassets */; };
 		5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */; };
 		5E9AC3411AFAAB05003E85BD /* KimbraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */; };
-		5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */; };
+		7071B96B1B14DA86009A206F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7071B9681B14DA86009A206F /* ViewController.swift */; };
+		7071B96C1B14DA86009A206F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7071B9691B14DA86009A206F /* Main.storyboard */; };
+		7071B96D1B14DA86009A206F /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7071B96A1B14DA86009A206F /* customButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,14 +30,14 @@
 		5E9AC3251AFAAB04003E85BD /* Kimbra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kimbra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9AC3291AFAAB04003E85BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E9AC32C1AFAAB04003E85BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5E9AC32F1AFAAB05003E85BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E9AC3311AFAAB05003E85BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E9AC3341AFAAB05003E85BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5E9AC33A1AFAAB05003E85BD /* KimbraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KimbraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9AC33F1AFAAB05003E85BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimbraTests.swift; sourceTree = "<group>"; };
-		5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		7071B9681B14DA86009A206F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7071B9691B14DA86009A206F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7071B96A1B14DA86009A206F /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +80,9 @@
 			isa = PBXGroup;
 			children = (
 				5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */,
-				5E9AC32C1AFAAB04003E85BD /* ViewController.swift */,
-				5E9AC32E1AFAAB05003E85BD /* Main.storyboard */,
-				5EE64F031AFAE8E000CC8EC7 /* UIViewExtensions.swift */,
+				7071B9681B14DA86009A206F /* ViewController.swift */,
+				7071B9691B14DA86009A206F /* Main.storyboard */,
+				7071B96A1B14DA86009A206F /* customButton.swift */,
 				5E9AC3311AFAAB05003E85BD /* Images.xcassets */,
 				5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */,
 				5E9AC3281AFAAB04003E85BD /* Supporting Files */,
@@ -164,6 +164,7 @@
 				TargetAttributes = {
 					5E9AC3241AFAAB04003E85BD = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = CTE779TT9N;
 					};
 					5E9AC3391AFAAB05003E85BD = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -195,7 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9AC3301AFAAB05003E85BD /* Main.storyboard in Resources */,
+				7071B96C1B14DA86009A206F /* Main.storyboard in Resources */,
 				5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */,
 				5E9AC3321AFAAB05003E85BD /* Images.xcassets in Resources */,
 			);
@@ -215,9 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E9AC32D1AFAAB04003E85BD /* ViewController.swift in Sources */,
-				5EE64F041AFAE8E000CC8EC7 /* UIViewExtensions.swift in Sources */,
+				7071B96B1B14DA86009A206F /* ViewController.swift in Sources */,
 				5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */,
+				7071B96D1B14DA86009A206F /* customButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +241,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5E9AC32E1AFAAB05003E85BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E9AC32F1AFAAB05003E85BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -347,9 +340,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Kimbra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -358,9 +353,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Kimbra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

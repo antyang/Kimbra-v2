@@ -1,27 +1,21 @@
 //
 //  ViewController.swift
-//  Kimbra
+//  Kimbra2.0
 //
-//  Created by Arthur Bello on 5/6/15.
-//  Copyright (c) 2015 Arthur Bello. All rights reserved.
+//  Created by Joshua Huang on 5/25/15.
+//  Copyright (c) 2015 Joshua Huang. All rights reserved.
 //
 
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
-    var count: Int = 1
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate{
+    
+    var on = [0,0,0,0,0,0,0,0,0]
+    var filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    var counter = 0;
     
     var session = AVAudioSession.sharedInstance()
-    var startstop1 = true
-    var startstop2 = true
-    var startstop3 = true
-    var startstop4 = true
-    var startstop5 = true
-    var startstop6 = true
-    var startstop7 = true
-    var startstop8 = true
-    var startstop9 = true
     var url1: NSURL?
     var url2: NSURL?
     var url3: NSURL?
@@ -31,6 +25,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     var url7: NSURL?
     var url8: NSURL?
     var url9: NSURL?
+    var url10: NSURL?
     var audioPlayer: AVAudioPlayer?
     var audioPlayer2: AVAudioPlayer?
     var audioPlayer3: AVAudioPlayer?
@@ -40,6 +35,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     var audioPlayer7: AVAudioPlayer?
     var audioPlayer8: AVAudioPlayer?
     var audioPlayer9: AVAudioPlayer?
+    var audioPlayer10: AVAudioPlayer?
     var audioRecorder: AVAudioRecorder?
     var column = 0
     var row = 1
@@ -50,36 +46,36 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         let docsDir = dirPaths[0] as! String
         println(docsDir)
         var soundFilePath =
-        docsDir.stringByAppendingPathComponent("sound\(count).caf")
+        docsDir.stringByAppendingPathComponent("sound\(counter).caf")
         println(soundFilePath)
         
         
         var soundFileURL = NSURL(fileURLWithPath: soundFilePath)
-        if count == 1 {
+        if counter == 0 {
             url1 = soundFileURL
         }
-        if count == 2 {
+        if counter == 2 {
             url2 = soundFileURL
         }
-        if count == 3 {
+        if counter == 4 {
             url3 = soundFileURL
         }
-        if count == 4 {
+        if counter == 6 {
             url4 = soundFileURL
         }
-        if count == 5 {
+        if counter == 8 {
             url5 = soundFileURL
         }
-        if count == 6 {
+        if counter == 10 {
             url6 = soundFileURL
         }
-        if count == 7 {
+        if counter == 12 {
             url7 = soundFileURL
         }
-        if count == 8 {
+        if counter == 14 {
             url8 = soundFileURL
         }
-        if count == 9 {
+        if counter == 16 {
             url9 = soundFileURL
         }
         let recordSettings =
@@ -107,83 +103,24 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             audioRecorder?.prepareToRecord()
         }
     }
-    @IBOutlet weak var stop: UIButton!
-    @IBOutlet weak var record_button: UIButton!
-    @IBAction func record(sender: AnyObject) {
-        run()
-        if audioRecorder?.recording == false {
-            count++
-            audioRecorder?.record()
-        }
-        self.record_button.fadeOut(completion: {
-            (finished: Bool) -> Void in
-            self.stop.hidden = false
-            self.stop.fadeIn()
-        })
-    }
-    @IBAction func pusher(sender: AnyObject) {
-        if audioRecorder?.recording == true {
-            audioRecorder?.stop()
-        } else {
-            
-        }
+    
+    
+    
 
-        if row < 4 {
-        column++
-            if column == 9 {
-            record_button.enabled = false
-            }
-        if column % 3 == 1 {
-            index = CGFloat(40)
-        }
-        else if column % 3 == 2{
-            index = CGFloat(150)
-        }
-        else {
-            index = CGFloat(260)
-
-        }
-        let dunamicButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-            func getRandomColor() -> UIColor{
-                
-                var randomRed:CGFloat = CGFloat(drand48())
-                
-                var randomGreen:CGFloat = CGFloat(drand48())
-                
-                var randomBlue:CGFloat = CGFloat(drand48())
-                
-                return UIColor(red: randomRed, green: randomGreen, blue: randomBlue, alpha: 1.0)
-                
-            }
-        dunamicButton.backgroundColor = getRandomColor()
-        dunamicButton.setTitle("Voice \(column)", forState: UIControlState.Normal)
-        dunamicButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-        dunamicButton.tag = Int(column)
-            dunamicButton.layer.borderWidth = 2.0
-        dunamicButton.layer.borderColor = UIColor.whiteColor().CGColor
-        dunamicButton.layer.cornerRadius = 10.0
-        println(dunamicButton.tag)
-        dunamicButton.frame = CGRectMake(index, CGFloat(row*130), 100, 100)
-        dunamicButton.addTarget(self, action: "playAudio:", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(dunamicButton)
-        if column % 3 == 0 {
-        row++
-            
-        }
-            self.stop.fadeOut(completion: {
-                (finished: Bool) -> Void in
-                self.record_button.fadeIn()
-                
-            })
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
     }
-    func playAudio(sender:UIButton!)
-    {
-        if sender.tag == 1 {
-            println(sender.tag)
-            if audioRecorder?.recording == false {
-                println(startstop1)
-                if startstop1 == true {
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func buttons(sender: UIButton) {
+        if sender.tag == 1{
+            if filled[0] == 1 {
+                if on[0] == 0 {
                     var url: NSURL?
                     
                     var error: NSError?
@@ -194,7 +131,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer = AVAudioPlayer(contentsOfURL: url1,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer?.numberOfLoops = -1
                     audioPlayer?.delegate = self
                     
@@ -203,21 +140,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     } else {
                         println("smokeey")
                         audioPlayer?.play()
-                        startstop1 = false
                     }
-                } else {
-                    audioPlayer?.stop()
-                    startstop1 = true
+
                     
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[0] = 1;
+                }
+                else if on[0] == 1{
+                    audioPlayer?.stop()
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[0] = 0;
                 }
             }
-
         }
-        else if sender.tag == 2 {
-            if audioRecorder?.recording == false {
-                
-                if startstop2 == true {
-                    
+        if sender.tag == 2{
+            if filled[2] == 1 {
+                if on[1] == 0 {
                     var url: NSURL?
                     
                     var error: NSError?
@@ -228,29 +166,30 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer2 = AVAudioPlayer(contentsOfURL: url2,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer2?.numberOfLoops = -1
                     audioPlayer2?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer2?.play()
-                        startstop2 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[1] = 1;
+                }
+                else if on[1] == 1{
                     audioPlayer2?.stop()
-                    startstop2 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[1] = 0
                 }
             }
-
         }
-        else if sender.tag == 3 {
-            if audioRecorder?.recording == false {
-                
-                if startstop3 == true {
-                    
+        if sender.tag == 3{
+            if filled[4] == 1 {
+                if on[2] == 0 {
                     var url: NSURL?
                     
                     var error: NSError?
@@ -261,29 +200,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer3 = AVAudioPlayer(contentsOfURL: url3,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer3?.numberOfLoops = -1
                     audioPlayer3?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer3?.play()
-                        startstop3 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[2] = 1;
+                }
+                else if on[2] == 1{
                     audioPlayer3?.stop()
-                    startstop3 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[2] = 0
                 }
             }
-
         }
-        
-        else if sender.tag == 4 {
-            if audioRecorder?.recording == false {
-                
-                if startstop4 == true {
+        if sender.tag == 4{
+            if filled[6] == 1 {
+                if on[3] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -293,29 +234,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer4 = AVAudioPlayer(contentsOfURL: url4,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer4?.numberOfLoops = -1
                     audioPlayer4?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer4?.play()
-                        startstop4 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[3] = 1;
+                }
+                else if on[3] == 1{
                     audioPlayer4?.stop()
-                    startstop4 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[3] = 0
                 }
             }
-
         }
-        
-        else if sender.tag == 5 {
-            if audioRecorder?.recording == false {
-                
-                if startstop5 == true {
+        if sender.tag == 5{
+            if filled[8] == 1 {
+                if on[4] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -325,28 +268,32 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer5 = AVAudioPlayer(contentsOfURL: url5,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer5?.numberOfLoops = -1
                     audioPlayer5?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer5?.play()
-                        startstop5 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[4] = 1;
+                }
+                else if on[4] == 1{
                     audioPlayer5?.stop()
-                    startstop5 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[4] = 0
                 }
             }
         }
-        
-        else if sender.tag == 6 {
-            if audioRecorder?.recording == false {
-                
-                if startstop6 == true {
+
+        if sender.tag == 6{
+            if filled[10] == 1 {
+                if on[5] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -356,29 +303,32 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer6 = AVAudioPlayer(contentsOfURL: url6,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer6?.numberOfLoops = -1
                     audioPlayer6?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer6?.play()
-                        startstop6 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[5] = 1;
+                }
+                else if on[5] == 1{
                     audioPlayer6?.stop()
-                    startstop6 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[5] = 0
                 }
             }
-
         }
-        
-        else if sender.tag == 7 {
-            if audioRecorder?.recording == false {
-                
-                if startstop7 == true {
+
+        if sender.tag == 7{
+            if filled[12] == 1 {
+                if on[6] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -388,29 +338,32 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer7 = AVAudioPlayer(contentsOfURL: url7,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer7?.numberOfLoops = -1
                     audioPlayer7?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer7?.play()
-                        startstop7 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[6] = 1;
+                }
+                else if on[6] == 1{
                     audioPlayer7?.stop()
-                    startstop7 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[6] = 0
                 }
             }
-
         }
-        
-        else if sender.tag == 8 {
-            if audioRecorder?.recording == false {
-                
-                if startstop8 == true {
+
+        if sender.tag == 8{
+            if filled[14] == 1 {
+                if on[7] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -420,28 +373,32 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer8 = AVAudioPlayer(contentsOfURL: url8,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer8?.numberOfLoops = -1
                     audioPlayer8?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer8?.play()
-                        startstop8 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[7] = 1;
+                }
+                else if on[7] == 1{
                     audioPlayer8?.stop()
-                    startstop8 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[7] = 0
                 }
             }
-
         }
-        else if sender.tag == 9 {
-            if audioRecorder?.recording == false {
-                
-                if startstop9 == true {
+
+        if sender.tag == 9{
+            if filled[16] == 1 {
+                if on[8] == 0 {
+                    var url: NSURL?
                     
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
@@ -451,48 +408,183 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioPlayer9 = AVAudioPlayer(contentsOfURL: url9,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-
+                    
                     audioPlayer9?.numberOfLoops = -1
                     audioPlayer9?.delegate = self
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
                     } else {
+                        println("smokeey")
                         audioPlayer9?.play()
-                        startstop9 = false
                     }
-                } else {
+
+                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    on[8] = 1;
+                }
+                else if on[8] == 1{
                     audioPlayer9?.stop()
-                    startstop9 = true
-                    
+                    sender.layer.borderColor = UIColor.grayColor().CGColor
+                    on[8] = 0
                 }
             }
         }
-    }
-    func audioPlayerDidFinishPlaying(player: AVAudioPlayer!, successfully flag: Bool) {
-        record_button.enabled = true
-        stop.enabled = true
-    }
-    func audioPlayerDecodeErrorDidOccur(player: AVAudioPlayer!, error: NSError!) {
-        println("Audio Play Decode Error")
-    }
-    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!, successfully flag: Bool) {
+        
+        if sender.tag == 10 {
+            stop_play()
+            
+            //enter code for recording
+            run()
+            if counter >= 19{
+                
+            }
+            else{
+                on = [0,0,0,0,0,0,0,0,0]
+                if counter % 2 == 0 {
+                   audioRecorder?.record()
+                   filled[counter] = 1
+                }
+                else if counter % 2 != 0{
+                    audioRecorder?.stop()
+                }
+                counter++
+
+            }
+            
+        }
+        
+        //reset button
+        if sender.tag == 11 {
+            stop_play()
+            on = [0,0,0,0,0,0,0,0,0]
+            filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            counter = 0
+            
+        }
+        
+        refresh()
+        
+
+
     }
     
-    func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!, error: NSError!) {
-        println("Audio Record Encode Error")
+    
+    @IBOutlet weak var button1: MyCustomButton!
+    @IBOutlet weak var button2: MyCustomButton!
+    @IBOutlet weak var button3: MyCustomButton!
+    @IBOutlet weak var button4: MyCustomButton!
+    @IBOutlet weak var button5: MyCustomButton!
+    @IBOutlet weak var button6: MyCustomButton!
+    @IBOutlet weak var button7: MyCustomButton!
+    @IBOutlet weak var button8: MyCustomButton!
+    @IBOutlet weak var button9: MyCustomButton!
+    @IBOutlet weak var button10: UIButton!
+    
+    func stop_play(){
+        audioPlayer?.stop()
+        audioPlayer2?.stop()
+        audioPlayer3?.stop()
+        audioPlayer4?.stop()
+        audioPlayer5?.stop()
+        audioPlayer6?.stop()
+        audioPlayer7?.stop()
+        audioPlayer8?.stop()
+        audioPlayer9?.stop()
     }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        stop.hidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    func refresh (){
+        if filled[0] == 1 {
+            button1.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[0] == 0 {
+            button1.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[2] == 1 {
+            button2.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[2] == 0 {
+            button2.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[4] == 1 {
+            button3.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[4] == 0 {
+            button3.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[6] == 1 {
+            button4.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[6] == 0 {
+            button4.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[8] == 1 {
+            button5.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[8] == 0 {
+            button5.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[10] == 1 {
+            button6.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[10] == 0 {
+            button6.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[12] == 1 {
+            button7.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[12] == 0 {
+            button7.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[14] == 1 {
+            button8.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[14] == 0 {
+            button8.backgroundColor = UIColor.whiteColor()
+        }
+        if filled[16] == 1 {
+            button9.backgroundColor = UIColor.yellowColor()
+        }
+        if filled[16] == 0 {
+            button9.backgroundColor = UIColor.whiteColor()
+        }
+        
+        if on[0] == 0 {
+            button1.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[1] == 0 {
+            button2.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[2] == 0 {
+            button3.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[3] == 0 {
+            button4.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[4] == 0 {
+            button5.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[5] == 0 {
+            button6.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[6] == 0 {
+            button7.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[7] == 0 {
+            button8.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if on[8] == 0 {
+            button9.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        if counter % 2 != 0{
+            button10.setTitle("STOP", forState: .Normal)
+        }
+        if counter % 2 == 0{
+            button10.setTitle("RECORD", forState: .Normal)
+        }
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
+    
 
 }
 

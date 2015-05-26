@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Kimbra2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kimbra" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2a3-oc-rCt">
+                                <rect key="frame" x="259" y="38" width="92" height="43"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq4-eo-Pce" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="176" y="103" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="2q2-8f-Rha"/>
+                                    <constraint firstAttribute="height" constant="80" id="If5-ub-Jpu"/>
+                                    <constraint firstAttribute="width" secondItem="yq4-eo-Pce" secondAttribute="height" multiplier="1:1" id="i6h-gU-bwv"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 1"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qb-an-zhX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83F-XV-eDQ" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="264" y="103" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="bSr-E8-xAf"/>
+                                    <constraint firstAttribute="width" secondItem="83F-XV-eDQ" secondAttribute="height" multiplier="1:1" id="hiV-1l-VFj"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 2"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bs-gT-5hb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uod-WI-IWp" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="352" y="103" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Fez-tr-z5M"/>
+                                    <constraint firstAttribute="height" constant="80" id="W3O-Pu-1Cc"/>
+                                    <constraint firstAttribute="width" secondItem="uod-WI-IWp" secondAttribute="height" multiplier="1:1" id="hBn-3I-oRy"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 3"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Om9-XJ-VLF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-nW-N9F" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="352" y="191" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CTG-nW-N9F" secondAttribute="height" multiplier="1:1" id="718-Cd-VuK"/>
+                                    <constraint firstAttribute="width" constant="80" id="hDc-9F-5rV"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 6"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ut5-Qd-ufY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-0r-ieu" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="176" y="191" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="r1c-fu-tFm"/>
+                                    <constraint firstAttribute="width" secondItem="fzo-0r-ieu" secondAttribute="height" multiplier="1:1" id="swg-ld-m7G"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 4"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Jr-vD-o2u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-XT-T0D" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="264" y="191" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Abp-XT-T0D" secondAttribute="height" multiplier="1:1" id="ZJY-SF-OWa"/>
+                                    <constraint firstAttribute="height" constant="80" id="fw9-Di-a0Z"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 5"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaI-kJ-E61"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYy-E3-TiK" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="352" y="279" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tYy-E3-TiK" secondAttribute="height" multiplier="1:1" id="EZm-Qz-0VE"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ers-UI-aNn"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 9"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evx-gq-frr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xed-Lc-61N" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="176" y="279" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="5ve-0V-XWu"/>
+                                    <constraint firstAttribute="width" secondItem="xed-Lc-61N" secondAttribute="height" multiplier="1:1" id="Woc-kE-RZ4"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 7"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNd-aS-fSo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aej-sx-AiO" customClass="MyCustomButton" customModule="Kimbra2_0" customModuleProvider="target">
+                                <rect key="frame" x="264" y="279" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aej-sx-AiO" secondAttribute="height" multiplier="1:1" id="knf-7d-mOy"/>
+                                    <constraint firstAttribute="height" constant="80" id="l5z-ry-gPf"/>
+                                </constraints>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 8"/>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgh-b6-PAQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-iX-b8U">
+                                <rect key="frame" x="210" y="404" width="189" height="30"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="RpE-4p-s4s"/>
+                                </constraints>
+                                <state key="normal" title="RECORD">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Byw-4K-bJE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PO7-61-uNf">
+                                <rect key="frame" x="212" y="461" width="189" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="189" id="2LZ-oM-ByB"/>
+                                </constraints>
+                                <state key="normal" title="RESET">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rsa-2S-lMj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="CTG-nW-N9F" firstAttribute="leading" secondItem="uod-WI-IWp" secondAttribute="trailing" constant="-80" id="0wY-NO-ut6"/>
+                            <constraint firstItem="xed-Lc-61N" firstAttribute="top" secondItem="fzo-0r-ieu" secondAttribute="bottom" constant="8" id="14h-E9-ESL"/>
+                            <constraint firstItem="Abp-XT-T0D" firstAttribute="top" secondItem="83F-XV-eDQ" secondAttribute="bottom" constant="8" id="68w-7n-S34"/>
+                            <constraint firstItem="tYy-E3-TiK" firstAttribute="top" secondItem="CTG-nW-N9F" secondAttribute="bottom" constant="8" id="8B8-5u-bYn"/>
+                            <constraint firstItem="2a3-oc-rCt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="97Q-PP-kiJ"/>
+                            <constraint firstItem="PO7-61-uNf" firstAttribute="top" secondItem="FMk-iX-b8U" secondAttribute="bottom" constant="27" id="AV4-Tv-hYl"/>
+                            <constraint firstAttribute="centerX" secondItem="83F-XV-eDQ" secondAttribute="centerX" constant="-4" id="Abx-wZ-BL7"/>
+                            <constraint firstItem="aej-sx-AiO" firstAttribute="top" secondItem="Abp-XT-T0D" secondAttribute="bottom" constant="8" id="GvP-kc-ue7"/>
+                            <constraint firstItem="CTG-nW-N9F" firstAttribute="top" secondItem="uod-WI-IWp" secondAttribute="bottom" constant="8" id="LfC-pn-AH9"/>
+                            <constraint firstAttribute="centerX" secondItem="FMk-iX-b8U" secondAttribute="centerX" constant="-4.5" id="Lir-rR-OJy"/>
+                            <constraint firstItem="CTG-nW-N9F" firstAttribute="leading" secondItem="Abp-XT-T0D" secondAttribute="trailing" constant="8" id="LzJ-H3-1ud"/>
+                            <constraint firstItem="tYy-E3-TiK" firstAttribute="leading" secondItem="aej-sx-AiO" secondAttribute="trailing" constant="8" id="MfZ-gj-iFM"/>
+                            <constraint firstItem="yq4-eo-Pce" firstAttribute="top" secondItem="2a3-oc-rCt" secondAttribute="bottom" constant="22" id="QBm-1I-slW"/>
+                            <constraint firstItem="Abp-XT-T0D" firstAttribute="leading" secondItem="fzo-0r-ieu" secondAttribute="trailing" constant="8" id="Sy0-85-3gM"/>
+                            <constraint firstItem="uod-WI-IWp" firstAttribute="leading" secondItem="83F-XV-eDQ" secondAttribute="trailing" constant="8" id="Udt-Lk-xQk"/>
+                            <constraint firstItem="83F-XV-eDQ" firstAttribute="top" secondItem="2a3-oc-rCt" secondAttribute="bottom" constant="22" id="VOs-vD-ziO"/>
+                            <constraint firstItem="uod-WI-IWp" firstAttribute="top" secondItem="2a3-oc-rCt" secondAttribute="bottom" constant="22" id="W4a-n2-QVC"/>
+                            <constraint firstItem="aej-sx-AiO" firstAttribute="leading" secondItem="xed-Lc-61N" secondAttribute="trailing" constant="8" id="f03-rg-VGR"/>
+                            <constraint firstItem="83F-XV-eDQ" firstAttribute="leading" secondItem="yq4-eo-Pce" secondAttribute="trailing" constant="8" id="g6G-rV-Ms7"/>
+                            <constraint firstAttribute="centerX" secondItem="PO7-61-uNf" secondAttribute="centerX" constant="-6.5" id="gev-24-fwO"/>
+                            <constraint firstAttribute="centerX" secondItem="aej-sx-AiO" secondAttribute="centerX" constant="-4" id="iJr-67-Qwf"/>
+                            <constraint firstAttribute="centerX" secondItem="2a3-oc-rCt" secondAttribute="centerX" constant="-5" id="oDz-jr-PiJ"/>
+                            <constraint firstItem="fzo-0r-ieu" firstAttribute="top" secondItem="yq4-eo-Pce" secondAttribute="bottom" constant="8" id="p43-d6-axi"/>
+                            <constraint firstItem="FMk-iX-b8U" firstAttribute="top" secondItem="aej-sx-AiO" secondAttribute="bottom" constant="45" id="tTs-JR-Vyw"/>
+                            <constraint firstAttribute="centerX" secondItem="Abp-XT-T0D" secondAttribute="centerX" constant="-4" id="wi2-PD-gvY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="yq4-eo-Pce" id="sMK-CB-vsD"/>
+                        <outlet property="button10" destination="FMk-iX-b8U" id="VYE-IV-fTK"/>
+                        <outlet property="button2" destination="83F-XV-eDQ" id="fAt-eE-Zzx"/>
+                        <outlet property="button3" destination="uod-WI-IWp" id="rLi-3R-kIj"/>
+                        <outlet property="button4" destination="fzo-0r-ieu" id="QXm-xq-q7L"/>
+                        <outlet property="button5" destination="Abp-XT-T0D" id="RE9-w4-u7Z"/>
+                        <outlet property="button6" destination="CTG-nW-N9F" id="XrG-wn-rL2"/>
+                        <outlet property="button7" destination="xed-Lc-61N" id="Y06-D3-jx6"/>
+                        <outlet property="button8" destination="aej-sx-AiO" id="cp8-5u-Bsi"/>
+                        <outlet property="button9" destination="tYy-E3-TiK" id="tYw-NX-qPX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
