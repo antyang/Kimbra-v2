@@ -13,7 +13,22 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     var on = [0,0,0,0,0,0,0,0,0]
     var filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+    var audiolevels: [Float] = [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+    var ratelevel: [Float] = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,]
     var counter = 0;
+    var lol: Float?
+
+    @IBAction func slider(sender: UISlider) {
+        audioPlayer?.volume = Float(sender.value)
+        audiolevels[sender.tag] = Float(sender.value)
+        
+        
+    }
+    @IBAction func slider2(sender: UISlider) {
+        audioPlayer?.rate = Float(sender.value)
+        ratelevel[sender.tag] = Float(sender.value)
+        
+    }
     
     var session = AVAudioSession.sharedInstance()
     var url1: NSURL?
@@ -132,8 +147,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
                     
+                    audioPlayer?.enableRate = true
                     audioPlayer?.numberOfLoops = -1
                     audioPlayer?.delegate = self
+                    audioPlayer?.volume = audiolevels[0]
+                    audioPlayer?.rate = ratelevel[0]
+                    println(audioPlayer?.volume)
                     
                     if let err = error {
                         println("audioPlayer error: \(err.localizedDescription)")
@@ -458,6 +477,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             stop_play()
             on = [0,0,0,0,0,0,0,0,0]
             filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+            audiolevels = [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+            ratelevel = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,]
+            
             counter = 0
             
         }
