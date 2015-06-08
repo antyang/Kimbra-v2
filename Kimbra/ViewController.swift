@@ -7,27 +7,51 @@
 //
 
 import UIKit
+import Foundation
 import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate{
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "startrecording" {
+//            let controller = segue.destinationViewController as! NoteDetailsViewController
+            println("STARTED RECORDING")
+//            controller.editingNote = sender as? Note
+        }
+        
+        if segue.identifier == "donerecording" {
+        println("DONE RECORDING")
+        }
+    }
+
+    
+    
+    @IBAction func reset(sender: UIBarButtonItem) {
+        stop_play()
+        on = [0,0,0,0,0,0,0,0,0]
+        filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        audiolevels = [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
+        ratelevel = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,]
+        counter = 0
+        refresh()
+    }
+    
+    var soundisthere = UIColor(red: 25/255, green: 166/255, blue: 200/255, alpha: 1)
+    var grayed = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1)
     
     var on = [0,0,0,0,0,0,0,0,0]
     var filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     var audiolevels: [Float] = [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
     var ratelevel: [Float] = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,]
     var counter = 0;
-    var lol: Float?
 
     @IBAction func slider(sender: UISlider) {
         audioPlayer?.volume = Float(sender.value)
         audiolevels[sender.tag] = Float(sender.value)
-        
-        
     }
     @IBAction func slider2(sender: UISlider) {
         audioPlayer?.rate = Float(sender.value)
         ratelevel[sender.tag] = Float(sender.value)
-        
     }
     
     var session = AVAudioSession.sharedInstance()
@@ -63,7 +87,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         var soundFilePath =
         docsDir.stringByAppendingPathComponent("sound\(counter).caf")
         println(soundFilePath)
-        
         
         var soundFileURL = NSURL(fileURLWithPath: soundFilePath)
         if counter == 0 {
@@ -119,12 +142,45 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        println("FULE")
+    }
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        button1.backgroundColor = grayed
+        button2.backgroundColor = grayed
+        button3.backgroundColor = grayed
+        button4.backgroundColor = grayed
+        button5.backgroundColor = grayed
+        button6.backgroundColor = grayed
+        button7.backgroundColor = grayed
+        button8.backgroundColor = grayed
+        button9.backgroundColor = grayed
+        button1.setTitleColor(grayed, forState: .Normal)
+        button2.setTitleColor(grayed, forState: .Normal)
+        button3.setTitleColor(grayed, forState: .Normal)
+        button4.setTitleColor(grayed, forState: .Normal)
+        button5.setTitleColor(grayed, forState: .Normal)
+        button6.setTitleColor(grayed, forState: .Normal)
+        button7.setTitleColor(grayed, forState: .Normal)
+        button8.setTitleColor(grayed, forState: .Normal)
+        button9.setTitleColor(grayed, forState: .Normal)
+        button1.layer.cornerRadius = 6.0
+        button2.layer.cornerRadius = 6.0
+        button3.layer.cornerRadius = 6.0
+        button4.layer.cornerRadius = 6.0
+        button5.layer.cornerRadius = 6.0
+        button6.layer.cornerRadius = 6.0
+        button7.layer.cornerRadius = 6.0
+        button8.layer.cornerRadius = 6.0
+        button9.layer.cornerRadius = 6.0
+        
+        var nav = self.navigationController?.navigationBar
+        nav?.titleTextAttributes =  [ NSFontAttributeName: UIFont(name: "OpenSans-Bold", size: 36)!,  NSForegroundColorAttributeName: UIColor(red: 73/255, green:  75/255, blue: 77/255, alpha: 1)]
+        
+        nav?.barTintColor = UIColor.whiteColor()
+        nav?.tintColor = UIColor(red: 73/255, green:  75/255, blue: 77/255, alpha: 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -137,16 +193,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             if filled[0] == 1 {
                 if on[0] == 0 {
                     var url: NSURL?
-                    
                     var error: NSError?
                     let audioSession = AVAudioSession.sharedInstance()
                     audioSession.setCategory(AVAudioSessionCategoryPlayAndRecord,
                         error: &error)
-                    
                     audioPlayer = AVAudioPlayer(contentsOfURL: url1,
                         error: &error)
                     session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker, error: nil)
-                    
                     audioPlayer?.enableRate = true
                     audioPlayer?.numberOfLoops = -1
                     audioPlayer?.delegate = self
@@ -161,17 +214,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer?.play()
                     }
 
-                    
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[0] = 1;
                 }
                 else if on[0] == 1{
                     audioPlayer?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[0] = 0;
                 }
             }
         }
+        
         if sender.tag == 2{
             if filled[2] == 1 {
                 if on[1] == 0 {
@@ -195,17 +249,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         println("smokeey")
                         audioPlayer2?.play()
                     }
-
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[1] = 1;
                 }
                 else if on[1] == 1{
                     audioPlayer2?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[1] = 0
                 }
             }
         }
+        
         if sender.tag == 3{
             if filled[4] == 1 {
                 if on[2] == 0 {
@@ -230,16 +285,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer3?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[2] = 1;
                 }
                 else if on[2] == 1{
                     audioPlayer3?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[2] = 0
                 }
             }
         }
+        
         if sender.tag == 4{
             if filled[6] == 1 {
                 if on[3] == 0 {
@@ -264,16 +321,18 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer4?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[3] = 1;
                 }
                 else if on[3] == 1{
                     audioPlayer4?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[3] = 0
                 }
             }
         }
+        
         if sender.tag == 5{
             if filled[8] == 1 {
                 if on[4] == 0 {
@@ -298,12 +357,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer5?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[4] = 1;
                 }
                 else if on[4] == 1{
                     audioPlayer5?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[4] = 0
                 }
             }
@@ -333,12 +393,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer6?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[5] = 1;
                 }
                 else if on[5] == 1{
                     audioPlayer6?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[5] = 0
                 }
             }
@@ -368,12 +429,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer7?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[6] = 1;
                 }
                 else if on[6] == 1{
                     audioPlayer7?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[6] = 0
                 }
             }
@@ -403,12 +465,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer8?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[7] = 1;
                 }
                 else if on[7] == 1{
                     audioPlayer8?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[7] = 0
                 }
             }
@@ -438,12 +501,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                         audioPlayer9?.play()
                     }
 
-                    sender.layer.borderColor = UIColor.greenColor().CGColor
+                    sender.layer.borderWidth = 2
+                    sender.layer.borderColor = UIColor.whiteColor().CGColor
                     on[8] = 1;
                 }
                 else if on[8] == 1{
                     audioPlayer9?.stop()
-                    sender.layer.borderColor = UIColor.grayColor().CGColor
+//                    sender.layer.borderColor = UIColor.grayColor().CGColor
                     on[8] = 0
                 }
             }
@@ -467,39 +531,20 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                     audioRecorder?.stop()
                 }
                 counter++
-
             }
-            
         }
-        
-        //reset button
-        if sender.tag == 11 {
-            stop_play()
-            on = [0,0,0,0,0,0,0,0,0]
-            filled = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
-            audiolevels = [0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5]
-            ratelevel = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,]
-            
-            counter = 0
-            
-        }
-        
         refresh()
-        
-
-
     }
     
-    
-    @IBOutlet weak var button1: MyCustomButton!
-    @IBOutlet weak var button2: MyCustomButton!
-    @IBOutlet weak var button3: MyCustomButton!
-    @IBOutlet weak var button4: MyCustomButton!
-    @IBOutlet weak var button5: MyCustomButton!
-    @IBOutlet weak var button6: MyCustomButton!
-    @IBOutlet weak var button7: MyCustomButton!
-    @IBOutlet weak var button8: MyCustomButton!
-    @IBOutlet weak var button9: MyCustomButton!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+    @IBOutlet weak var button5: UIButton!
+    @IBOutlet weak var button6: UIButton!
+    @IBOutlet weak var button7: UIButton!
+    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var button9: UIButton!
     @IBOutlet weak var button10: UIButton!
     
     func stop_play(){
@@ -516,86 +561,86 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     func refresh (){
         if filled[0] == 1 {
-            button1.backgroundColor = UIColor.yellowColor()
+            button1.backgroundColor = soundisthere
         }
         if filled[0] == 0 {
-            button1.backgroundColor = UIColor.whiteColor()
+            button1.backgroundColor = grayed
         }
         if filled[2] == 1 {
-            button2.backgroundColor = UIColor.yellowColor()
+            button2.backgroundColor = soundisthere
         }
         if filled[2] == 0 {
-            button2.backgroundColor = UIColor.whiteColor()
+            button2.backgroundColor = grayed
         }
         if filled[4] == 1 {
-            button3.backgroundColor = UIColor.yellowColor()
+            button3.backgroundColor = soundisthere
         }
         if filled[4] == 0 {
-            button3.backgroundColor = UIColor.whiteColor()
+            button3.backgroundColor = grayed
         }
         if filled[6] == 1 {
-            button4.backgroundColor = UIColor.yellowColor()
+            button4.backgroundColor = soundisthere
         }
         if filled[6] == 0 {
-            button4.backgroundColor = UIColor.whiteColor()
+            button4.backgroundColor = grayed
         }
         if filled[8] == 1 {
-            button5.backgroundColor = UIColor.yellowColor()
+            button5.backgroundColor = soundisthere
         }
         if filled[8] == 0 {
-            button5.backgroundColor = UIColor.whiteColor()
+            button5.backgroundColor = grayed
         }
         if filled[10] == 1 {
-            button6.backgroundColor = UIColor.yellowColor()
+            button6.backgroundColor = soundisthere
         }
         if filled[10] == 0 {
-            button6.backgroundColor = UIColor.whiteColor()
+            button6.backgroundColor = grayed
         }
         if filled[12] == 1 {
-            button7.backgroundColor = UIColor.yellowColor()
+            button7.backgroundColor = soundisthere
         }
         if filled[12] == 0 {
-            button7.backgroundColor = UIColor.whiteColor()
+            button7.backgroundColor = grayed
         }
         if filled[14] == 1 {
-            button8.backgroundColor = UIColor.yellowColor()
+            button8.backgroundColor = soundisthere
         }
         if filled[14] == 0 {
-            button8.backgroundColor = UIColor.whiteColor()
+            button8.backgroundColor = grayed
         }
         if filled[16] == 1 {
-            button9.backgroundColor = UIColor.yellowColor()
+            button9.backgroundColor = soundisthere
         }
         if filled[16] == 0 {
-            button9.backgroundColor = UIColor.whiteColor()
+            button9.backgroundColor = grayed
         }
         
         if on[0] == 0 {
-            button1.layer.borderColor = UIColor.grayColor().CGColor
+            button1.layer.borderWidth = 0
         }
         if on[1] == 0 {
-            button2.layer.borderColor = UIColor.grayColor().CGColor
+            button2.layer.borderWidth = 0
         }
         if on[2] == 0 {
-            button3.layer.borderColor = UIColor.grayColor().CGColor
+            button3.layer.borderWidth = 0
         }
         if on[3] == 0 {
-            button4.layer.borderColor = UIColor.grayColor().CGColor
+            button4.layer.borderWidth = 0
         }
         if on[4] == 0 {
-            button5.layer.borderColor = UIColor.grayColor().CGColor
+            button5.layer.borderWidth = 0
         }
         if on[5] == 0 {
-            button6.layer.borderColor = UIColor.grayColor().CGColor
+            button6.layer.borderWidth = 0
         }
         if on[6] == 0 {
-            button7.layer.borderColor = UIColor.grayColor().CGColor
+            button7.layer.borderWidth = 0
         }
         if on[7] == 0 {
-            button8.layer.borderColor = UIColor.grayColor().CGColor
+            button8.layer.borderWidth = 0
         }
         if on[8] == 0 {
-            button9.layer.borderColor = UIColor.grayColor().CGColor
+            button9.layer.borderWidth = 0
         }
         if counter % 2 != 0{
             button10.setTitle("STOP", forState: .Normal)
@@ -605,8 +650,5 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
         
     }
-    
-    
-
 }
 

@@ -12,8 +12,11 @@
 		5E9AC3411AFAAB05003E85BD /* KimbraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */; };
 		7071B96B1B14DA86009A206F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7071B9681B14DA86009A206F /* ViewController.swift */; };
 		7071B96C1B14DA86009A206F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7071B9691B14DA86009A206F /* Main.storyboard */; };
-		7071B96D1B14DA86009A206F /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7071B96A1B14DA86009A206F /* customButton.swift */; };
 		7071B9831B14E2C9009A206F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7071B9821B14E2C9009A206F /* Images.xcassets */; };
+		70DD46111B226AB60007F91F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70DD46101B226AB60007F91F /* OpenSans-Bold.ttf */; };
+		70DD46121B226AB60007F91F /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 70DD46101B226AB60007F91F /* OpenSans-Bold.ttf */; };
+		70E56B781B229E1700FE1FD4 /* recordingdelegation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E56B771B229E1700FE1FD4 /* recordingdelegation.swift */; };
+		70E56B7A1B22A18800FE1FD4 /* recordviewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E56B791B22A18800FE1FD4 /* recordviewcontroller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,10 @@
 		5E9AC3401AFAAB05003E85BD /* KimbraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimbraTests.swift; sourceTree = "<group>"; };
 		7071B9681B14DA86009A206F /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7071B9691B14DA86009A206F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7071B96A1B14DA86009A206F /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
 		7071B9821B14E2C9009A206F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		70DD46101B226AB60007F91F /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		70E56B771B229E1700FE1FD4 /* recordingdelegation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordingdelegation.swift; sourceTree = "<group>"; };
+		70E56B791B22A18800FE1FD4 /* recordviewcontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = recordviewcontroller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +84,14 @@
 		5E9AC3271AFAAB04003E85BD /* Kimbra */ = {
 			isa = PBXGroup;
 			children = (
+				70DD46101B226AB60007F91F /* OpenSans-Bold.ttf */,
 				5E9AC32A1AFAAB04003E85BD /* AppDelegate.swift */,
 				7071B9681B14DA86009A206F /* ViewController.swift */,
+				70E56B791B22A18800FE1FD4 /* recordviewcontroller.swift */,
 				7071B9691B14DA86009A206F /* Main.storyboard */,
-				7071B96A1B14DA86009A206F /* customButton.swift */,
 				7071B9821B14E2C9009A206F /* Images.xcassets */,
 				5E9AC3331AFAAB05003E85BD /* LaunchScreen.xib */,
+				70E56B771B229E1700FE1FD4 /* recordingdelegation.swift */,
 				5E9AC3281AFAAB04003E85BD /* Supporting Files */,
 			);
 			path = Kimbra;
@@ -197,6 +204,7 @@
 			files = (
 				7071B9831B14E2C9009A206F /* Images.xcassets in Resources */,
 				7071B96C1B14DA86009A206F /* Main.storyboard in Resources */,
+				70DD46111B226AB60007F91F /* OpenSans-Bold.ttf in Resources */,
 				5E9AC3351AFAAB05003E85BD /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70DD46121B226AB60007F91F /* OpenSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +226,8 @@
 			files = (
 				7071B96B1B14DA86009A206F /* ViewController.swift in Sources */,
 				5E9AC32B1AFAAB04003E85BD /* AppDelegate.swift in Sources */,
-				7071B96D1B14DA86009A206F /* customButton.swift in Sources */,
+				70E56B781B229E1700FE1FD4 /* recordingdelegation.swift in Sources */,
+				70E56B7A1B22A18800FE1FD4 /* recordviewcontroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
