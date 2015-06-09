@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gjp-bd-Epc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="gjp-bd-Epc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -38,6 +38,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Bs-gT-5hb"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver2" popoverAnchorView="83F-XV-eDQ" id="tRS-Qp-g0z">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzo-0r-ieu" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
@@ -54,22 +57,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Jr-vD-o2u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-XT-T0D" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
-                                <rect key="frame" x="231" y="228" width="140" height="140"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Track 5"/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="151" y="361" width="100" height="133"/>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="301" y="361" width="200" height="133"/>
-                                </variation>
-                                <connections>
-                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaI-kJ-E61"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver4" popoverAnchorView="fzo-0r-ieu" id="O7V-Gv-BXC">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xed-Lc-61N" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
@@ -80,6 +70,9 @@
                                 <state key="normal" title="Track 7"/>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNd-aS-fSo"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver7" popoverAnchorView="xed-Lc-61N" id="YeH-Ul-L26">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMk-iX-b8U">
@@ -115,6 +108,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8qb-an-zhX"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver1" popoverAnchorView="yq4-eo-Pce" id="Xuv-C4-CLM">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uod-WI-IWp" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
@@ -131,6 +127,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Om9-XJ-VLF"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver3" popoverAnchorView="uod-WI-IWp" id="qu7-ws-8QH">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTG-nW-N9F" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
@@ -147,6 +146,9 @@
                                 </variation>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ut5-Qd-ufY"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver6" popoverAnchorView="CTG-nW-N9F" id="roh-SO-JED">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="9" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tYy-E3-TiK" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
@@ -157,6 +159,9 @@
                                 <state key="normal" title="Track 9"/>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evx-gq-frr"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver9" popoverAnchorView="tYy-E3-TiK" id="0lO-bU-YlE">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-FQ-9um">
@@ -179,6 +184,28 @@
                                 <state key="normal" title="Track 8"/>
                                 <connections>
                                     <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kgh-b6-PAQ"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver8" popoverAnchorView="aej-sx-AiO" id="u8L-Z8-X4D">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abp-XT-T0D" customClass="MyCustomButton" customModule="Kimbra" customModuleProvider="target">
+                                <rect key="frame" x="231" y="228" width="140" height="140"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.14271391729999999" blue="0.045110686339999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="2" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Track 5"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="151" y="361" width="100" height="133"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="301" y="361" width="200" height="133"/>
+                                </variation>
+                                <connections>
+                                    <action selector="buttons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UaI-kJ-E61"/>
+                                    <segue destination="pJQ-8s-SBZ" kind="popoverPresentation" identifier="popOver5" popoverAnchorView="Abp-XT-T0D" id="eOq-zi-OLf">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -288,7 +315,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1203" y="274"/>
+            <point key="canvasLocation" x="1171" y="322"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tVA-7P-M5f">
+            <objects>
+                <viewController id="pJQ-8s-SBZ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jya-O4-zI8"/>
+                        <viewControllerLayoutGuide type="bottom" id="3jF-lS-ctp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D76-lq-rRe">
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="500" height="100"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="100"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="62g-dx-idq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1907" y="322"/>
         </scene>
         <!--Recordviewcontroller-->
         <scene sceneID="djI-YE-ve9">
@@ -350,4 +398,7 @@
             <point key="canvasLocation" x="334" y="-419"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tRS-Qp-g0z"/>
+    </inferredMetricsTieBreakers>
 </document>

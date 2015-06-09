@@ -7,16 +7,20 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>551AED8D-19B4-4FF2-A5B0-BD4D0B487C3F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Kimbra</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>96F1EAF0F09E98E6D3EB4ADE7ABE2517AC7BCD82</key>
+		<string>https://github.com/antyang/js_balls.git</string>
 		<key>DDC522A002CD3280C69062E1E936D1D3078E852A</key>
 		<string>https://github.com/arashnamvar/Kimbra-v2.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Kimbra.xcodeproj/project.xcworkspace</string>
+	<string>Kimbra.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>96F1EAF0F09E98E6D3EB4ADE7ABE2517AC7BCD82</key>
+		<string>../../..</string>
 		<key>DDC522A002CD3280C69062E1E936D1D3078E852A</key>
 		<string>../..</string>
 	</dict>
@@ -32,9 +36,17 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>96F1EAF0F09E98E6D3EB4ADE7ABE2517AC7BCD82</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>DDC522A002CD3280C69062E1E936D1D3078E852A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Kimbra_REAL</string>
+			<string>Kimbra-v2</string>
 		</dict>
 	</array>
 </dict>

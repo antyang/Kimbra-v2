@@ -10,19 +10,19 @@ import UIKit
 import Foundation
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate{
+class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate, UIPopoverPresentationControllerDelegate{
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "startrecording" {
-//            let controller = segue.destinationViewController as! NoteDetailsViewController
-            println("STARTED RECORDING")
-//            controller.editingNote = sender as? Note
-        }
-        
-        if segue.identifier == "donerecording" {
-        println("DONE RECORDING")
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "startrecording" {
+////            let controller = segue.destinationViewController as! NoteDetailsViewController
+//            println("STARTED RECORDING")
+////            controller.editingNote = sender as? Note
+//        }
+//        
+//        if segue.identifier == "donerecording" {
+//        println("DONE RECORDING")
+//        }
+//    }
 
     
     
@@ -181,8 +181,359 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         
         nav?.barTintColor = UIColor.whiteColor()
         nav?.tintColor = UIColor(red: 73/255, green:  75/255, blue: 77/255, alpha: 1)
-    }
+        
 
+        // __________________________________________________________________________
+        
+        var gesture1: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed1:")
+        var gesture2: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed2:")
+        var gesture3: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed3:")
+        var gesture4: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed4:")
+        var gesture5: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed5:")
+        var gesture6: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed6:")
+        var gesture7: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed7:")
+        var gesture8: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed8:")
+        var gesture9: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed9:")
+        
+        let abc: () = gesture1.minimumPressDuration = 2.0
+        gesture2.minimumPressDuration = 2.0
+        gesture3.minimumPressDuration = 2.0
+        gesture4.minimumPressDuration = 2.0
+        gesture5.minimumPressDuration = 2.0
+        gesture6.minimumPressDuration = 2.0
+        gesture7.minimumPressDuration = 2.0
+        gesture8.minimumPressDuration = 2.0
+        gesture9.minimumPressDuration = 2.0
+        
+        self.button1.addGestureRecognizer(gesture1)
+        self.button2.addGestureRecognizer(gesture2)
+        self.button3.addGestureRecognizer(gesture3)
+        self.button4.addGestureRecognizer(gesture4)
+        self.button5.addGestureRecognizer(gesture5)
+        self.button6.addGestureRecognizer(gesture6)
+        self.button7.addGestureRecognizer(gesture7)
+        self.button8.addGestureRecognizer(gesture8)
+        self.button9.addGestureRecognizer(gesture9)
+        
+        
+        /*
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: "longPressed:")
+        self.view.addGestureRecognizer(longPressRecognizer)
+        */
+        
+    }
+    
+    /*
+    func longPressed (sender: UIGestureRecognizer) {
+        println("here")
+        println(sender.view)
+    }
+    */
+
+    // __________________________________________________________________________
+    
+    func longPressed1(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver1", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed2(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver2", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed3(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver3", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed4(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver4", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed5(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver5", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed6(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver6", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed7(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver7", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed8(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver8", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    func longPressed9(longPress: UIGestureRecognizer){
+        if(longPress.state == UIGestureRecognizerState.Began){
+            button10.enabled = true;
+            if filled[0] == 1 {
+                self.performSegueWithIdentifier("popOver9", sender: self)
+            }
+            else if filled[0] == 0 {
+                println("denied: empty block")
+            }
+        }
+    }
+    
+    
+    
+    
+    // __________________________________________________________________________
+    // -- all for popup, otherwise fullpage modal
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.None
+    }
+    
+    // __________________________________________________________________________
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if identifier == "popOver1" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+        
+        if identifier == "popOver2" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+        
+        if identifier == "popOver3" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+        
+        if identifier == "popOver4" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        if identifier == "popOver5" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        if identifier == "popOver6" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        if identifier == "popOver7" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        if identifier == "popOver8" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        if identifier == "popOver9" {
+            if filled[0] == 0 {
+                let alert = UIAlertView()
+                alert.title = "No Recording Found"
+                alert.message = "Prease Record A Sound"
+                alert.addButtonWithTitle("Ok")
+                alert.show()
+            }
+            return false
+        }
+            
+        else {
+            return true
+        }
+    }
+    
+    
+    // __________________________________________________________________________
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "popOver1" {
+            println("prepareForSegue here")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver2"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver3"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver4" {
+            println("prepareForSegue here")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver5"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver6"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver7"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver8"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+        if segue.identifier == "popOver9"{
+            println("here track2")
+            let popoverViewController = segue.destinationViewController as! UIViewController
+            popoverViewController.modalPresentationStyle = UIModalPresentationStyle.Popover
+            popoverViewController.popoverPresentationController!.delegate = self
+        }
+    }
+    // __________________________________________________________________________
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
