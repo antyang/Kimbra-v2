@@ -141,11 +141,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
             audioRecorder?.prepareToRecord()
         }
     }
-    
-    override func viewDidAppear(animated: Bool) {
-        println("FULE")
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         button1.backgroundColor = grayed
@@ -866,7 +862,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         
         if sender.tag == 10 {
             stop_play()
-            
             //enter code for recording
             run()
             if counter >= 19{
@@ -878,14 +873,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
                    audioRecorder?.record()
                    filled[counter] = 1
                 }
-                else if counter % 2 != 0{
-                    audioRecorder?.stop()
-                }
+//                else if counter % 2 != 0{
+//                    audioRecorder?.stop()
+//                }
                 counter++
             }
         }
         refresh()
     }
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        println("FULE")
+        audioRecorder?.stop()
+        if counter >= 1 {
+            counter++
+        }
+        refresh()
+    }
+    
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -993,9 +999,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         if on[8] == 0 {
             button9.layer.borderWidth = 0
         }
-        if counter % 2 != 0{
-            button10.setTitle("STOP", forState: .Normal)
-        }
+//        if counter % 2 != 0{
+//            button10.setTitle("STOP", forState: .Normal)
+//        }
         if counter % 2 == 0{
             button10.setTitle("RECORD", forState: .Normal)
         }
