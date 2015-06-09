@@ -231,7 +231,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed1(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[0] == 1 && on[0] == 1{
                 self.performSegueWithIdentifier("popOver1", sender: self)
             }
             else if filled[0] == 0 {
