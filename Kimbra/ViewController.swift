@@ -10,7 +10,8 @@ import UIKit
 import Foundation
 import AVFoundation
 
-class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate, UIPopoverPresentationControllerDelegate{
+
+class MainViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate, UIPopoverPresentationControllerDelegate{
     
 //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 //        if segue.identifier == "startrecording" {
@@ -24,7 +25,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
 //        }
 //    }
 
-    
+
     
     @IBAction func reset(sender: UIBarButtonItem) {
         stop_play()
@@ -232,6 +233,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
             if filled[0] == 1 && on[0] == 1{
+                println(longPress.description)
                 self.performSegueWithIdentifier("popOver1", sender: self)
             }
             else if filled[0] == 0 {
@@ -243,10 +245,11 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed2(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[2] == 1 && on[1] == 1{
+                println(longPress.description)
                 self.performSegueWithIdentifier("popOver2", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[2] == 0 {
                 println("denied: empty block")
             }
         }
@@ -255,10 +258,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed3(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[4] == 1 && on[2] == 1 {
                 self.performSegueWithIdentifier("popOver3", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[4] == 0 {
                 println("denied: empty block")
             }
         }
@@ -267,10 +270,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed4(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[6] == 1 && on[3] == 1 {
                 self.performSegueWithIdentifier("popOver4", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[6] == 0 {
                 println("denied: empty block")
             }
         }
@@ -279,10 +282,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed5(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[8] == 1 && on[4] == 1 {
                 self.performSegueWithIdentifier("popOver5", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[8] == 0 {
                 println("denied: empty block")
             }
         }
@@ -291,10 +294,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed6(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[10] == 1 && on[5] == 1 {
                 self.performSegueWithIdentifier("popOver6", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[10] == 0 {
                 println("denied: empty block")
             }
         }
@@ -303,10 +306,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed7(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[12] == 1 && on[6] == 1 {
                 self.performSegueWithIdentifier("popOver7", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[12] == 0 {
                 println("denied: empty block")
             }
         }
@@ -315,10 +318,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed8(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[14] == 1 && on[7] == 1 {
                 self.performSegueWithIdentifier("popOver8", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[14] == 0 {
                 println("denied: empty block")
             }
         }
@@ -327,10 +330,10 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     func longPressed9(longPress: UIGestureRecognizer){
         if(longPress.state == UIGestureRecognizerState.Began){
             button10.enabled = true;
-            if filled[0] == 1 {
+            if filled[16] == 1 && on[8] == 1 {
                 self.performSegueWithIdentifier("popOver9", sender: self)
             }
-            else if filled[0] == 0 {
+            else if filled[16] == 0 {
                 println("denied: empty block")
             }
         }
@@ -360,7 +363,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
         
         if identifier == "popOver2" {
-            if filled[0] == 0 {
+            if filled[2] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -371,7 +374,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
         
         if identifier == "popOver3" {
-            if filled[0] == 0 {
+            if filled[4] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -382,7 +385,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
         
         if identifier == "popOver4" {
-            if filled[0] == 0 {
+            if filled[6] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -393,7 +396,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
             
         if identifier == "popOver5" {
-            if filled[0] == 0 {
+            if filled[8] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -404,7 +407,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
             
         if identifier == "popOver6" {
-            if filled[0] == 0 {
+            if filled[10] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -415,7 +418,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
             
         if identifier == "popOver7" {
-            if filled[0] == 0 {
+            if filled[12] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -426,7 +429,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
             
         if identifier == "popOver8" {
-            if filled[0] == 0 {
+            if filled[14] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -437,7 +440,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
         }
             
         if identifier == "popOver9" {
-            if filled[0] == 0 {
+            if filled[16] == 0 {
                 let alert = UIAlertView()
                 alert.title = "No Recording Found"
                 alert.message = "Prease Record A Sound"
@@ -456,6 +459,8 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     // __________________________________________________________________________
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
         if segue.identifier == "popOver1" {
             println("prepareForSegue here")
             let popoverViewController = segue.destinationViewController as! UIViewController
@@ -516,17 +521,7 @@ class ViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDe
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     
